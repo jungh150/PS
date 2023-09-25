@@ -17,9 +17,6 @@ notSeen = sorted(notSeen)
 hIndex = 0
 sIndex = 0
 
-print(notHeard)
-print(notSeen)
-
 while (hIndex < n) & (sIndex < m):
     if (notHeard[hIndex] == notSeen[sIndex]):
         ans.append(notHeard[hIndex])
