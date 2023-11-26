@@ -16,7 +16,7 @@ for _ in range(n):
     elif x == 1:
         ans += 1
     else:
-        zero -= True
+        zero = True
 
 while pos.qsize() > 1:
     ans += (pos.get() * pos.get())
