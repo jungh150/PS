@@ -32,6 +32,7 @@ def sum(b, c):
 for i in range(leafIndex, leafIndex + n):
     tree[i] = int(stdin.readline())
 
+# 트리 초기화
 i = treeSize - 1
 while i != 1:
     tree[i // 2] += tree[i]
