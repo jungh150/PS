@@ -16,7 +16,7 @@ int main() {
     dp[1] = 1;
     if (n > 1) dp[2] = 3;
     for (int i = 3; i <= n; i++) {
-        dp[i] = (3 * dp[i - 2] + dp[i - 1]) % mod;
+        dp[i] = (2 * dp[i - 2] + dp[i - 1]) % mod;
     }
 
     cout << dp[n] << '\n';
