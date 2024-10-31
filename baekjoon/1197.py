@@ -1,4 +1,6 @@
+import sys
 from sys import stdin
+sys.setrecursionlimit(10**6)
 
 v, e = map(int, stdin.readline().split())
 edge = []
