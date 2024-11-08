@@ -1,22 +1,30 @@
 #include <iostream>
 #include <vector>
+#include <map>
 using namespace std;
 
-const int M = 1000000007;
-vector<int> fib;
+int mod = 1000000007;
+map<long long, long long> m;
 
-int findPisanoPeriod(int m) {
-    fib.push_back(0);
-    fib.push_back(1);
-    int idx = 2;
-    while (1) {
-        fib.push_back((fib[idx - 1] + fib[idx - 2]) % m);
-        if (fib[idx] == 1 && fib[idx - 1] == 0) {
-            break;
+long long fib(long long n) {
+    if (n == 0) return 0;
+    else if (n == 1) return 1;
+    else if (n == 2) return 1;
+    else {
+        if (m.find(n) != m.end()) {
+            return m[n];
+        } else {
+            if (n % 2 == 0) {
+                long long tmp = (fib(n / 2) * (fib(n / 2 + 1) + fib(n / 2 - 1))) % mod;
+                m[n] = tmp;
+                return tmp;
+            } else {
+                long long tmp = (fib((n + 1) / 2) * fib((n + 1) / 2) + fib((n - 1) / 2) * fib((n - 1) / 2)) % mod;
+                m[n] = tmp;
+                return tmp;
+            }
         }
-        idx++;
     }
-    return idx - 1;
 }
 
 int main() {
@@ -26,7 +34,5 @@ int main() {
 
     long long n;
     cin >> n;
-
-    int pi = findPisanoPeriod(M);
-    cout << fib[n % pi] << '\n';
+    cout << fib(n) << '\n';
 }
