@@ -36,7 +36,6 @@ int main() {
         }
 
         if (idx1 == sn) {
-            cnt += an - idx2;
             double tmp = g / cnt;
             if (tmp > ans) {
                 ans = tmp;
