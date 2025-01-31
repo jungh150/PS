@@ -11,7 +11,7 @@ int main() {
     int n;
     cin >> n;
 
-    vector<pair<int, int>> data (n);
+    vector<pair<int, int>> data(n);
     vector<int> ans = vector<int>(n);
     for (int i = 0; i < n; i++) {
         cin >> data[i].first;
@@ -21,7 +21,6 @@ int main() {
     sort(data.begin(), data.end());
 
     int cnt = 0;
-    int tmp = 0;
     ans[data[0].second] = 0;
     int pre = data[0].first;
     for (int i = 1; i < n; i++) {
