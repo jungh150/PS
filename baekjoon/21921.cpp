@@ -16,6 +16,7 @@ int main() {
     int sumt = 0;
     int s = 0;
     int e = 0;
+    // 길이가 x일인 첫번째 구간
     while (e < x) {
         sumt += a[e];
         e++;
@@ -25,15 +26,16 @@ int main() {
     int cnt = 1;
 
     while (e < n) {
+        // 한칸씩 뒤로 이동하여 구간의 길이 유지
         sumt -= a[s];
         s++;
         sumt += a[e];
         e++;
 
-        if (sumt > maxt) {
+        if (sumt > maxt) { // 최댓값이 갱신되면 cnt도 갱신
             maxt = sumt;
             cnt = 1;
-        } else if (sumt == maxt) {
+        } else if (sumt == maxt) { // 아니라면 cnt만 1 증가
             cnt++;
         }
     }

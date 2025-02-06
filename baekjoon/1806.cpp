@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 
+int MAX_INT = 100000;
+
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
@@ -15,14 +17,14 @@ int main() {
     int si = 0;
     int ei = 1;
     int sumt = a[0];
-    int ans = 200000;
+    int ans = MAX_INT;
     int cnt = 1;
     while (ei <= n) {
-        if (sumt < s) {
+        if (sumt < s) { // sumt가 s보다 작으면 뒤쪽 원소 하나 추가
             sumt += a[ei];
             ei++;
             cnt++;
-        } else {
+        } else { // 크면 갱신 후 앞쪽 원소 하나 제거
             ans = min(ans, cnt);
             sumt -= a[si];
             si++;
@@ -30,6 +32,6 @@ int main() {
         }
     }
 
-    if (ans == 200000) cout << 0 << '\n';
+    if (ans == MAX_INT) cout << 0 << '\n';
     else cout << ans << '\n';
 }
