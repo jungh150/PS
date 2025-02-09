@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <set>
-#include <algorithm>
 using namespace std;
 
 bool p[10000];
@@ -15,7 +14,7 @@ void dfs(int idx, int res) {
         if (res < 10000 && p[res]) ans.insert(res);
         return;
     }
-    for (int i = 0; i < n; i++) {
+    for (int i = idx; i < n; i++) {
         if (!chk[i]) {
             chk[i] = 1;
             dfs(idx + 1, res + h[i]);
@@ -33,10 +32,8 @@ int main() {
     p[0] = p[1] = 0;
 
     for (int i = 2; i < 5000; i++) {
-        int tmp = i * 2;
-        while (tmp < 10000) {
-            p[tmp] = 0;
-            tmp += i;
+        if (p[i]) {
+            for (int j = i + i; j < 10000; j += i) p[j] = 0;
         }
     }
 
@@ -44,7 +41,6 @@ int main() {
     h = vector<int>(n);
     chk = vector<bool>(n, false);
     for (int i = 0; i < n; i++) cin >> h[i];
-    sort(h.begin(), h.end());
 
     dfs(0, 0);
     if (ans.empty()) {

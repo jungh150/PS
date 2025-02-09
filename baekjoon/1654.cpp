@@ -15,18 +15,18 @@ int main() {
         cin >> data[i];
     }
 
-    long long l = 0;
-    long long r = data[0] + 1;
+    long long l = 0;  // 최소 길이
+    long long r = data[0] + 1;  // 최대 길이
 
     while (l < r) {
         long long m = (l + r) / 2;
-        int cnt = 0;
+        int cnt = 0;  // 잘라서 얻을 수 있는 랜선 개수
         for (int i = 0; i < k; i++) {
             cnt += data[i] / m;
         }
-        if (cnt >= n)
+        if (cnt >= n)  // 필요한 개수 이상이면 더 긴 길이도 가능할 수도 있음
             l = m + 1;
-        else if (cnt < n)
+        else  // 필요한 개수보다 적으면 더 짧게 잘라야 함
             r = m;
     }
 
