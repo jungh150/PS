@@ -3,8 +3,8 @@
 using namespace std;
 
 vector<vector<int>> p;
-int cnt0 = 0;
-int cnt1 = 0;
+int cnt0 = 0;  // 햐얀색 색종이의 개수
+int cnt1 = 0;  // 파란색 색종이의 개수
 
 void countp(int r, int c, int s) {
     bool chk = true;
@@ -22,6 +22,7 @@ void countp(int r, int c, int s) {
         }
     }
 
+    // 같은 색으로 이루어졌다면 개수 증가
     if (chk) {
         if (tmp == 0) {
             cnt0++;
@@ -30,6 +31,7 @@ void countp(int r, int c, int s) {
             cnt1++;
         }
     }
+    // 그렇지 않다면 4등분하여 재귀 호출
     else {
         int news = s / 2;
         countp(r, c, news);
