@@ -16,30 +16,21 @@ int main() {
         if (op == "add") {
             cin >> n;
             now = now | (1 << (n - 1));
-        }
-        else if (op == "remove") {
+        } else if (op == "remove") {
             cin >> n;
             if ((now & (1 << (n - 1))) != 0) {
                 now = now ^ (1 << (n - 1));
             }
-        }
-        else if (op == "check") {
+        } else if (op == "check") {
             cin >> n;
-            if ((now & (1 << (n - 1))) == 0) {
-                cout << 0 << '\n';
-            }
-            else {
-                cout << 1 << '\n';
-            }
-        }
-        else if (op == "toggle") {
+            if ((now & (1 << (n - 1))) == 0) cout << 0 << '\n';
+            else cout << 1 << '\n';
+        } else if (op == "toggle") {
             cin >> n;
             now = now ^ (1 << (n - 1));
-        }
-        else if (op == "all") {
+        } else if (op == "all") {
             now = -1;
-        }
-        else if (op == "empty") {
+        } else if (op == "empty") {
             now = 0;
         }
     }
