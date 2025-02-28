@@ -2,8 +2,6 @@
 #include <vector>
 using namespace std;
 
-int dx[3] = {1, 0, 1};
-int dy[3] = {0, 1, 1};
 vector<vector<int>> a;
 
 int main() {
