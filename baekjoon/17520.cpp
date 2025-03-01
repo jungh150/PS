@@ -12,9 +12,9 @@ int main() {
     int n;
     cin >> n;
 
-    vector<long long> dp1(n + 1); // 0의 개수가 1개 더 많은 이진 문자열 수
-    vector<long long> dp2(n + 1); // 0의 개수와 1의 개수가 같은 이진 문자열 수
-    vector<long long> dp3(n + 1); // 1의 개수가 1개 더 많은 이진 문자열 수
+    vector<int> dp1(n + 1); // 0의 개수가 1개 더 많은 이진 문자열 수
+    vector<int> dp2(n + 1); // 0의 개수와 1의 개수가 같은 이진 문자열 수
+    vector<int> dp3(n + 1); // 1의 개수가 1개 더 많은 이진 문자열 수
 
     dp1[0] = 1;
     dp2[0] = 0;
