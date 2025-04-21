@@ -8,15 +8,6 @@ vector<vector<int>> a;
 int dx[] = {1, -1, 0, 0};
 int dy[] = {0, 0, 1, -1};
 
-bool isclear() {
-    for (int i = 0; i < r; i++) {
-        for (int j = 0; j < c; j++) {
-            if (a[i][j] > 0) return false;
-        }
-    }
-    return true;
-}
-
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
