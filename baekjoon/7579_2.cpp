@@ -18,10 +18,10 @@ int main() {
 
     vector<vector<int>> dp(10001, vector<int>(n + 1, 0));
 
-    for (int i = 0; i < 10001; i++) {
-        for (int j = 1; j < n + 1; j++) {
-            dp[i][j] = dp[i][j - 1];
-            if (i - c[j] >= 0) dp[i][j] = max(dp[i][j], dp[i - c[j]][j - 1] + mem[j]);
+    for (int i = 0; i < 10001; i++) { // i만큼의 비용으로
+        for (int j = 1; j < n + 1; j++) { // j번째 앱까지 확인
+            dp[i][j] = dp[i][j - 1]; // j번째 앱을 사용하지 않은 경우
+            if (i - c[j] >= 0) dp[i][j] = max(dp[i][j], dp[i - c[j]][j - 1] + mem[j]); // j번째 앱을 선택하는 게 더 이득이면 업데이트
         }
     }
 
