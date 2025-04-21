@@ -18,8 +18,8 @@ int main() {
 
     vector<int> dp(10001, 0);
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 10000; j >= 0; j--) { // 역순!
+    for (int i = 0; i < n; i++) { // i번째 앱 확인
+        for (int j = 10000; j >= 0; j--) { // j만큼의 비용 (역순으로 업데이트!)
             if (j - c[i] >= 0) dp[j] = max(dp[j], dp[j - c[i]] + mem[i]);
         }
     }
