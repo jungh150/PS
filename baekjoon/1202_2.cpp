@@ -31,7 +31,7 @@ int main() {
             q.push(gem[gi].second);
             gi++;
         }
-        // 그 중 가장 가치가 큰 보석을 넣기
+        // 그 중 가장 가치가 큰 보석을 가방에 넣기
         if (!q.empty()) {
             ans += q.top();
             q.pop();
