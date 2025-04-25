@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <queue>
 #include <algorithm>
 using namespace std;
 
@@ -11,41 +12,29 @@ int main() {
     int n, k;
     cin >> n >> k;
     
-    vector<vector<int>> gem(n, vector<int>(2));
-    for (int i = 0; i < n; i++) {
-        int m, v;
-        cin >> m >> v;
-        gem[i][0] = v;
-        gem[i][1] = m;
-    }
+    vector<pair<int, int>> gem(n);
+    for (int i = 0; i < n; i++) cin >> gem[i].first >> gem[i].second;
 
     vector<int> bag(k);
     for (int i = 0; i < k; i++) cin >> bag[i];
 
-    sort(gem.begin(), gem.end(), greater<>());
-    sort(bag.begin(), bag.end());
+    sort(gem.begin(), gem.end()); // 보석 무게 기준 오름차순 정렬
+    sort(bag.begin(), bag.end()); // 가방 오름차순 정렬
 
     long long ans = 0;
-    vector<bool> chk(k, 0);
+    priority_queue<int> q;
 
-    for (int i = 0; i < n; i++) {
-        int l = 0;
-        int r = k;
-        while (l < r) {
-            int m = (l + r) / 2;
-            if (bag[m] < gem[i][1]) {
-                l = m + 1;
-            } else {
-                r = m;
-            }
+    int gi = 0;
+    for (int i = 0; i < k; i++) { // 작은 가방부터 하나씩 체크
+        // 담을 수 있는 보석을 우선순위 큐에 추가해주기
+        while (gi < n && gem[gi].first <= bag[i]) {
+            q.push(gem[gi].second);
+            gi++;
         }
-
-        int tmp = l;
-        while (chk[tmp]) tmp++;
-
-        if (tmp < k) {
-            ans += gem[i][0];
-            chk[tmp] = 1;
+        // 그 중 가장 가치가 큰 보석을 가방에 넣기
+        if (!q.empty()) {
+            ans += q.top();
+            q.pop();
         }
     }
 
