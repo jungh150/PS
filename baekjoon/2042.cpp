@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <cmath>
 using namespace std;
 
 int n, m, k;
