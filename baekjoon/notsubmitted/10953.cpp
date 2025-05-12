@@ -12,7 +12,7 @@ int main() {
     while (t--) {
         int a, b;
         char c;
-        cin >> a >>c >>  b;
+        cin >> a >> c >>  b;
 
         cout << a + b << '\n';
     }
