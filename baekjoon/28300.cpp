@@ -21,7 +21,7 @@ int main() {
     a[2] = make_pair(2, 1);
     a[3] = make_pair(2, 2);
 
-    while (q--) {
+    for (int i = 0; i < q; i++) {
         string op;
         cin >> op;
         if (op == "RO") {
