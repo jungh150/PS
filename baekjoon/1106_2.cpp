@@ -12,21 +12,15 @@ int main() {
     int c, n;
     cin >> c >> n;
 
-    vector<pair<int, int>> a;
+    vector<pair<int, int>> a(n);
     for (int i = 0; i < n; i++) {
-        int cost, val;
-        cin >> cost >> val;
-        int cnt = (c + val - 1) / val; // floor(c / val)
-        while (cnt--) {
-            a.emplace_back(cost, val);
-        }
+        cin >> a[i].first >> a[i].second;
     }
 
-    int an = a.size();
     vector<int> dp(MAX_COST, 0);
 
-    for (int i = 0; i < an; i++) { // i번째 아이템 확인
-        for (int j = MAX_COST - 1; j >= 0; j--) { // j만큼의 비용 (역방향으로 update)
+    for (int i = 0; i < n; i++) { // i번째 아이템 확인
+        for (int j = 0; j < MAX_COST; j++) { // j만큼의 비용 (정방향으로 update)
             if (j - a[i].first >= 0) dp[j] = max(dp[j], dp[j - a[i].first] + a[i].second);
         }
     }
