@@ -10,10 +10,10 @@ struct SegTree {
 
     void push(int idx, int l, int r) {
         if (lazy[idx] == 0) return;
-        tree[idx] += (r - l + 1) * lazy[idx];
+        if ((r - l + 1) % 2 == 1) tree[idx] ^= lazy[idx];
         if (l < r) {
-            lazy[idx * 2] += lazy[idx];
-            lazy[idx * 2 + 1] += lazy[idx];
+            lazy[idx * 2] ^= lazy[idx];
+            lazy[idx * 2 + 1] ^= lazy[idx];
         }
         lazy[idx] = 0;
     }
@@ -22,12 +22,12 @@ struct SegTree {
         push(idx, l, r);
         if (wr < l || wl > r) return tree[idx];
         if (wl <= l && wr >= r) {
-            lazy[idx] += val;
+            lazy[idx] ^= val;
             push(idx, l, r);
             return tree[idx];
         }
         int m = (l + r) / 2;
-        return tree[idx] = update(idx * 2, l, m, wl, wr, val) + update(idx * 2 + 1, m + 1, r, wl, wr, val);
+        return tree[idx] = update(idx * 2, l, m, wl, wr, val) ^ update(idx * 2 + 1, m + 1, r, wl, wr, val);
     }
     
     long long query(int idx, int l, int r, int wl, int wr) {
@@ -35,15 +35,15 @@ struct SegTree {
         if (wr < l || wl > r) return 0;
         if (wl <= l && wr >= r) return tree[idx];
         int m = (l + r) / 2;
-        return query(idx * 2, l, m, wl, wr) + query(idx * 2 + 1, m + 1, r, wl, wr);
+        return query(idx * 2, l, m, wl, wr) ^ query(idx * 2 + 1, m + 1, r, wl, wr);
     }
     
     long long update(int wl, int wr, long long val) {
-        return update(1, 0, n, wl, wr, val);
+        return update(1, 0, n - 1, wl, wr, val);
     }
     
     long long query(int wl, int wr) {
-        return query(1, 0, n, wl, wr);
+        return query(1, 0, n - 1, wl, wr);
     }
 };
 
@@ -58,7 +58,7 @@ int main() {
     seg.tree.assign(4 * n + 1, 0);
     seg.lazy.assign(4 * n + 1, 0);
 
-    for (int i = 1; i < n + 1; i++) {
+    for (int i = 0; i < n; i++) {
         long long x;
         cin >> x;
         seg.update(i, i, x);
@@ -75,9 +75,9 @@ int main() {
             cin >> i >> j >> k;
             seg.update(i, j, k);
         } else if (q == 2) {
-            int x;
-            cin >> x;
-            cout << seg.query(x, x) << '\n';
+            int i, j;
+            cin >> i >> j;
+            cout << seg.query(i, j) << '\n';
         }
     }
 }
