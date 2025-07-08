@@ -32,55 +32,35 @@ struct MinSegTree {
     }
 };
 
-struct MaxSegTree {
-    vector<int> tree;
-
-    int update(int idx, int l, int r, int target, int val) {
-        if (target < l || target > r) return tree[idx];
-        if (l == r) return tree[idx] = val;
-        int m = (l + r) / 2;
-        return tree[idx] = max(update(idx * 2, l, m, target, val), update(idx * 2 + 1, m + 1, r, target, val));
-    }
-    
-    int query(int idx, int l, int r, int wl, int wr) {
-        if (wr < l || wl > r) return MIN_VAL;
-        if (wl <= l && wr >= r) return tree[idx];
-        int m = (l + r) / 2;
-        return max(query(idx * 2, l, m, wl, wr), query(idx * 2 + 1, m + 1, r, wl, wr));
-    }
-    
-    int update(int target, int val) {
-        return update(1, 1, n, target, val);
-    }
-    
-    int query(int wl, int wr) {
-        return query(1, 1, n, wl, wr);
-    }
-};
-
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
 
     MinSegTree minseg;
-    MaxSegTree maxseg;
 
-    cin >> n >> m;
+    cin >> n;
     minseg.tree.assign(4 * n + 1, MAX_VAL);
-    maxseg.tree.assign(4 * n + 1, MIN_VAL);
 
     for (int i = 1; i < n + 1; i++) {
         int x;
         cin >> x;
         minseg.update(i, x);
-        maxseg.update(i, x);
     }
 
+    cin >> m;
     while (m--) {
-        int a, b;
-        cin >> a >> b;
+        int q;
+        cin >> q;
 
-        cout << minseg.query(a, b) << ' ' << maxseg.query(a, b) << '\n';
+        if (q == 1) {
+            int i, v;
+            cin >> i >> v;
+            minseg.update(i, v);
+        } else if (q == 2) {
+            int i, j;
+            cin >> i >> j;
+            cout << minseg.query(i, j) << '\n';
+        }
     }
 }
