@@ -2,7 +2,6 @@
 #include <vector>
 using namespace std;
 
-int MIN_VAL = 0;
 int MAX_VAL = 1000000001;
 int n, m;
 
