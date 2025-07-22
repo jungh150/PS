@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-int n, ans;
+int n, res;
 vector<vector<int>> a;
 
 bool promising(int ci, int cj) {
@@ -23,8 +23,8 @@ bool promising(int ci, int cj) {
 
 // 합이 0 ~ (2n - 2)인 우상향 대각선 사용
 void bt(int idx, int cnt) {
-    if (idx == 2 * n - 1) {
-        ans = max(ans, cnt);
+    if (idx >= 2 * n - 1) {
+        res = max(res, cnt);
         return;
     }
     for (int i = 0; i < n; i++) {
@@ -33,11 +33,11 @@ void bt(int idx, int cnt) {
         if (a[i][j] == 0) continue;
         if (promising(i, j)) {
             a[i][j] = 2;
-            bt(idx + 1, cnt + 1);
+            bt(idx + 2, cnt + 1);
             a[i][j] = 1;
         }
     }
-    bt(idx + 1, cnt);
+    bt(idx + 2, cnt);
 }
 
 int main() {
@@ -54,7 +54,15 @@ int main() {
         }
     }
 
+    int ans = 0;
+
+    res = 0;
     bt(0, 0);
+    ans += res;
+
+    res = 0;
+    bt(1, 0);
+    ans += res;
 
     cout << ans << '\n';
 }
