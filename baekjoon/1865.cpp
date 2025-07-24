@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 
+int INTMAX = 1e8;
+
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
@@ -13,47 +15,41 @@ int main() {
     while (tc--) {
         int n, m, w;
         cin >> n >> m >> w;
-        vector<vector<int>> edge;
-        vector<int> dst(n + 1, 100000000);
 
-        int s, e, t;
-        dst[1] = 0;
+        vector<vector<int>> edge;
 
         for (int i = 0; i < m; i++) {
+            int s, e, t;
             cin >> s >> e >> t;
             edge.push_back({s, e, t});
             edge.push_back({e, s, t});
         }
 
         for (int i = 0; i < w; i++) {
+            int s, e, t;
             cin >> s >> e >> t;
             edge.push_back({s, e, -t});
         }
 
+        vector<int> dst(n + 1, INTMAX);
+        dst[1] = 0;
+
         int es = edge.size();
-        for (int i = 0; i < n - 1; i++) {
+
+        bool nc = false;
+        for (int i = 0; i < n; i++) {
             for (int j = 0; j < es; j++) {
-                s = edge[j][0];
-                e = edge[j][1];
-                t = edge[j][2];
-                if (dst[e] > dst[s] + t) {
-                    dst[e] = dst[s] + t;
+                int s = edge[j][0];
+                int e = edge[j][1];
+                int c = edge[j][2];
+                if (dst[s] + c < dst[e]) {
+                    dst[e] = dst[s] + c;
+                    if (i == n - 1) nc = true;
                 }
             }
         }
 
-        bool infinite = false;
-        for (int i = 0; i < es; i++) {
-	    	s = edge[i][0];
-	    	e = edge[i][1];
-	    	t = edge[i][2];
-	    	if (dst[e] > dst[s] + t) {
-	    		infinite = true;
-                break;
-	    	}
-	    }
-
-        if (infinite) cout << "YES\n";
+        if (nc) cout << "YES\n";
         else cout << "NO\n";
     }
 }
