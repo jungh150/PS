@@ -31,7 +31,7 @@ int main() {
             if (dst[a] == INTMAX) continue;
             if (dst[a] + c < dst[b]) {
                 dst[b] = dst[a] + c;
-                if (i == n - 1) nc = true;
+                if (i == n - 1) nc = true; // s로부터 도달할 수 있는 음의 사이클
             }
         }
     }
