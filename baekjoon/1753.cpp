@@ -30,6 +30,7 @@ int main() {
     while (!q.empty()) {
         auto [curd, cur] = q.top();
         q.pop();
+        if (dst[cur] != curd) continue;
         for (auto [nxt, w]: adj[cur]) {
             int newdst = curd + w;
             if (newdst < dst[nxt]) {
