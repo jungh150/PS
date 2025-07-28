@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int main() {
@@ -10,12 +11,45 @@ int main() {
     int n;
     cin >> n;
 
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) cin >> a[i];
+    vector<int> a(n + 1);
+    for (int i = 1; i < n + 1; i++) cin >> a[i];
+    a[0] = 0;
 
-    // dp[i][j]: i번째 열차를 앞(j=0), 뒤(j=1), 혹은 사용하지 않았을 때(j=2) 최대 {앞 중량, 뒤 중량, 열차 배열 길이}
-    vector<vector<vector<int>>> dp(n, vector<vector<int>>(3));
-    dp[0][0] = {a[0], a[0], 1};
-    dp[0][1] = {a[0], a[0], 1};
-    dp[0][2] = {a[0], a[0], 0};
+    int ans = 0;
+    for (int i = 1; i < n + 1; i++) {
+        vector<int> b(n + 1);
+        int tmpa = 0;
+
+        // LIS
+        int maxl = 1;
+        b[1] = a[i];
+        for (int j = i + 1; j < n + 1; j++) {
+            if (a[j] > b[maxl]) {
+                maxl++;
+                b[maxl] = a[j];
+            } else if (a[j] > a[i]) {
+                int idx = lower_bound(b.begin() + 1, b.begin() + maxl + 1, a[j]) - b.begin();
+                b[idx] = a[j];
+            }
+        }
+        tmpa += maxl;
+
+        // LDS
+        maxl = 1;
+        b[1] = a[i];
+        for (int j = i + 1; j < n + 1; j++) {
+            if (a[j] < b[maxl]) {
+                maxl++;
+                b[maxl] = a[j];
+            } else if (a[j] < a[i]) {
+                int idx = lower_bound(b.begin() + 1, b.begin() + maxl + 1, a[j], greater<>()) - b.begin();
+                b[idx] = a[j];
+            }
+        }
+        tmpa += maxl;
+        
+        ans = max(ans, tmpa - 1);
+    }
+
+    cout << ans << '\n';
 }
