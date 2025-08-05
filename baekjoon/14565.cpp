@@ -24,6 +24,6 @@ int main() {
     long long n, a;
     cin >> n >> a;
 
-    cout << (n - (a % n)) % n << ' '; // 덧셈역
+    cout << (n - a) % n << ' '; // 덧셈역
     cout << modinv(a, n) << '\n'; // 곱셈역
 }
