@@ -2,11 +2,11 @@
 using namespace std;
 
 void solve() {
-    long long n;
-    cin >> n;
-
-    if (n % 10 == 0) cout << 1 << '\n';
-    else cout << 0 << '\n';
+    int k, d, a;
+    char c;
+    cin >> k >> c >> d >> c >> a;
+    if (k + a < d || d == 0) cout << "hasu\n";
+    else cout << "gosu\n";
 }
 
 int main() {
@@ -15,7 +15,6 @@ int main() {
     cout.tie(0);
 
     int T = 1;
-    cin >> T;
     for (int i = 0; i < T; i++) {
         solve();
     }

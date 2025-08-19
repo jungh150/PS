@@ -24,7 +24,7 @@ vector<int> bfs(int s) {
     return dst;
 }
 
-void solve(){
+void solve() {
     cin >> n >> m;
 
     adj = vector<vector<pair<int, int>>>(n + 1);
@@ -76,7 +76,7 @@ void solve(){
     cout << '\n';
 }
 
-int main(){
+int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);

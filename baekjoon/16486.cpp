@@ -2,11 +2,13 @@
 using namespace std;
 
 void solve() {
-    long long n;
-    cin >> n;
+    double d1, d2;
+    cin >> d1 >> d2;
+    
+    cout << fixed;
+    cout.precision(8);
 
-    if (n % 10 == 0) cout << 1 << '\n';
-    else cout << 0 << '\n';
+    cout << 2 * d1 + 2 * d2 * 3.141592 << '\n';
 }
 
 int main() {
@@ -15,7 +17,6 @@ int main() {
     cout.tie(0);
 
     int T = 1;
-    cin >> T;
     for (int i = 0; i < T; i++) {
         solve();
     }

@@ -2,11 +2,9 @@
 using namespace std;
 
 void solve() {
-    long long n;
-    cin >> n;
-
-    if (n % 10 == 0) cout << 1 << '\n';
-    else cout << 0 << '\n';
+    int v, e;
+    cin >> v >> e;
+    cout << 2 - v + e << '\n';
 }
 
 int main() {

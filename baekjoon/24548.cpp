@@ -6,7 +6,7 @@ using namespace std;
 int dp[3][3][3][3];
 int cnt[4];
 
-void solve(){
+void solve() {
     int n;
     cin >> n;
     string s;
@@ -29,7 +29,7 @@ void solve(){
     cout << ans << '\n';
 }
 
-int main(){
+int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
