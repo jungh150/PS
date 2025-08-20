@@ -21,18 +21,14 @@ int main() {
         return 0;
     }
 
-    int ans = 0;
+    int ans = 1;
 
     for (int k = 0; k < 30; k++) {
         int idx1 = rng() % n;
         int idx2 = rng() % n;
         while (idx1 == idx2) idx2 = rng() % n;
 
-        cout << "a1=" << a[idx1] << ' ';
-        cout << "a2=" << a[idx2] << ' ';
-
         int dif = abs(a[idx1] - a[idx2]);
-        cout << "dif=" << dif << '\n';
         vector<pair<int, int>> div; // {약수, 나머지}
         for (int i = 1; i * i <= dif; i++) {
             if (dif % i == 0) {
@@ -47,9 +43,6 @@ int main() {
             for (int x: a) {
                 if (x % d == rem) cnt++;
             }
-            cout << "d=" << d << ' ';
-            cout << "rem=" << rem << ' ';
-            cout << "cnt=" << cnt << '\n';
             ans = max(ans, cnt);
         }
     }
