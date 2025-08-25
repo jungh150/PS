@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-int MAXXVAL = 1000000;
+int MAXVAL = 1000000;
 int n;
 
 struct SegTree {
@@ -23,11 +23,11 @@ struct SegTree {
     }
     
     long long update(int target, long long val) {
-        return update(1, 0, MAXXVAL, target, val);
+        return update(1, 0, MAXVAL, target, val);
     }
     
     long long query(int wl, int wr) {
-        return query(1, 0, MAXXVAL, wl, wr);
+        return query(1, 0, MAXVAL, wl, wr);
     }
 };
 
@@ -39,15 +39,15 @@ int main() {
     SegTree seg;
 
     cin >> n;
-    seg.tree.assign(4 * MAXXVAL + 1, 0);
+    seg.tree.assign(4 * MAXVAL + 1, 0);
 
-    for (int i = 1; i < MAXXVAL + 1; i++) seg.update(i, 0);
+    for (int i = 1; i < MAXVAL + 1; i++) seg.update(i, 0);
 
     long long ans = 0;
     for (int i = 0; i < n; i++) {
         int x;
         cin >> x;
-        ans += seg.query(x + 1, MAXXVAL);
+        ans += seg.query(x + 1, MAXVAL);
         seg.update(x, seg.query(x, x) + 1);
     }
 
