@@ -205,7 +205,12 @@ void test() {
 
 int main() {
 	board f;
-	int prv;
+	board g;
+	int f_score_bid = 0;
+	int g_score_bid = 0;
+	int f_prv_type = 0;
+	int f_prv_bid = 0;
+	int g_prv_bid = 0;
 	while (1) {
 		string input; getline(cin, input);
 		istringstream in(input);
@@ -219,15 +224,46 @@ int main() {
 			int sb = 0;
 			for (int i = 0; i < 5; i++) sa += a[i] - '0';
 			for (int i = 0; i < 5; i++) sb += b[i] - '0';
+			int f_score = f_score_bid + f.get_score();
+			int g_score = g_score_bid + g.get_score();
+			int val = (f_score - g_score) / 10;
+			if (val < 0) val = 0;
+			if (val > 100000) val = 100000;
+			val = val / 3 + abs(sa - sb) * 200 + g_prv_bid / 2;
 			f.roll(a, b);
-			int val = abs(sa - sb) * 300 + prv / 2;
-			if (sa > sb) cout << "BID A " << val << endl;
-			else cout << "BID B " << val << endl;
+			g.roll(a, b);
+			if (sa > sb) {
+				cout << "BID A " << val << endl;
+				f_prv_type = 0;
+				f_prv_bid = val;
+			}
+			else {
+				cout << "BID B " << val << endl;
+				f_prv_type = 1;
+				f_prv_bid = val;
+			}
 		}
 		else if (cmd == "GET") {
 			string type; in >> type;
+			string _; in >> _;
+			int val; in >> val;
 			f.get(type == "A" ? 0 : 1);
-			in >> type >> prv;
+			g.get(type == "A" ? 1 : 0);
+			if (f_prv_type == (_ == "A" ? 0 : 1)) {
+				if (f_prv_type == (type == "A" ? 0 : 1)) {
+					f_score_bid -= f_prv_bid;
+					g_score_bid += val;
+				}
+				else {
+					f_score_bid += f_prv_bid;
+					g_score_bid -= val;
+				}
+			}
+			else {
+				f_score_bid -= f_prv_bid;
+				g_score_bid -= val;
+			}
+			g_prv_bid = val;
 		}
 		else if (cmd == "SCORE") {
 			auto [op, s] = f.choose();
@@ -235,6 +271,11 @@ int main() {
 			cout << "PUT " << get_op_name(op) << ' ' << s << endl;
 		}
 		else if (cmd == "SET") {
+			string s_op; in >> s_op;
+			string s; in >> s;
+			int op = 0;
+			while (get_op_name(op) != s_op) op++;
+			g.put(op, s);
 		}
 		else if (cmd == "FINISH") {
 			break;
