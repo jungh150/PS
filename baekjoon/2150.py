@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
-
 sys.setrecursionlimit(100000)
+
 v, e = map(int, input().split())
 adj1 = [[] for _ in range(v + 1)]
 adj2 = [[] for _ in range(v + 1)]
