@@ -10,21 +10,17 @@ vector<bool> vst;
 stack<int> st;
 
 void dfs1(int cur) {
+    vst[cur] = true;
     for (int nxt: adj1[cur]) {
-        if (!vst[nxt]) {
-            vst[nxt] = true;
-            dfs1(nxt);
-        }
+        if (!vst[nxt]) dfs1(nxt);
     }
     st.push(cur);
 }
 
 void dfs2(int cur) {
+    vst[cur] = true;
     for (int nxt: adj2[cur]) {
-        if (!vst[nxt]) {
-            vst[nxt] = true;
-            dfs2(nxt);
-        }
+        if (!vst[nxt]) dfs2(nxt);
     }
 }
 
@@ -42,10 +38,7 @@ void solve() {
     // first DFS
     vst = vector<bool>(n + 1, false);
     for (int i = 1; i < n + 1; i++) {
-        if (!vst[i]) {
-            vst[i] = true;
-            dfs1(i);
-        }
+        if (!vst[i]) dfs1(i);
     }
 
     // second DFS
@@ -55,7 +48,6 @@ void solve() {
         int x = st.top();
         st.pop();
         if (!vst[x]) {
-            vst[x] = true;
             dfs2(x);
             cnt++;
         }
