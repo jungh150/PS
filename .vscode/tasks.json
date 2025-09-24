@@ -11,6 +11,8 @@
             "label": "save and compile for C++",
             "command": "g++",
             "args": [
+                // default: c++17
+                // "-std=c++20",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
@@ -95,6 +97,8 @@
             "label": "C/C++: g++.exe 활성 파일 빌드",
             "command": "C:\\mingw64\\bin\\g++.exe",
             "args": [
+                // default: c++17
+                // "-std=c++20",
                 "-g",
                 "${file}",
                 "-o",
