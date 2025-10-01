@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 void solve() {
@@ -16,13 +15,15 @@ void solve() {
     
     long long ans = 0;
     
-    if (ph == 0 && pg == 0) ans = 50 * 100000;
-    else ans = 100000 * 100 * ph / (ph + pg);
+    // 1000 곱하기 (10은 반올림을 위해서)
+    if (ph == 0 && pg == 0) ans = 50 * 1000;
+    else ans = 1000 * 100 * ph / (ph + pg);
 
-    ans = ans / 100;
+    // 반올림 처리
     if (ans % 10 >= 5) ans = ans / 10 + 1;
     else ans = ans / 10;
 
+    // 100의 몫과 나머지로 출력
     cout << ans / 100 << '.';
     long long rem = ans % 100;
     if (rem / 10 == 0) cout << 0 << rem << '\n';
