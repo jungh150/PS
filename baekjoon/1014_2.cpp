@@ -1,3 +1,6 @@
+// 출처: green55 teamnote
+// https://github.com/green5555/Teamnote/blob/master/TeamNote/BiMatch.cpp
+
 #include <bits/stdc++.h>
 using namespace std;
 

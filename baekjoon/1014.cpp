@@ -1,3 +1,6 @@
+// 출처: green55 teamnote
+// https://github.com/green5555/Teamnote/blob/master/TeamNote/Ed-Karp.cpp
+
 #include <bits/stdc++.h>
 using namespace std;
 
