@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 using namespace std;
 
 int MAX_VAL = 1000000;
@@ -31,25 +32,46 @@ struct SegTree {
     }
 };
 
-int main() {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
+void solve() {
+    cin >> n;
+
+    unordered_map<int, int> pos;
+
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) cin >> a[i];
+
+    vector<int> b(n);
+    for (int i = 0; i < n; i++) {
+        cin >> b[i];
+        pos[b[i]] = i;
+    }
+
+    vector<int> res(n);
+    for (int i = 0; i < n; i++) {
+        res[i] = pos[a[i]];
+    }
 
     SegTree seg;
 
-    cin >> n;
     seg.tree.assign(4 * MAX_VAL + 1, 0);
 
     for (int i = 1; i < MAX_VAL + 1; i++) seg.update(i, 0);
 
     long long ans = 0;
     for (int i = 0; i < n; i++) {
-        int x;
-        cin >> x;
-        ans += seg.query(x + 1, MAX_VAL);
-        seg.update(x, seg.query(x, x) + 1);
+        ans += seg.query(res[i] + 1, MAX_VAL);
+        seg.update(res[i], seg.query(res[i], res[i]) + 1);
     }
 
     cout << ans << '\n';
+}
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    int T = 1;
+    for (int i = 0; i < T; i++) {
+        solve();
+    }
 }
