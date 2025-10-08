@@ -1,3 +1,6 @@
+// Reference: green55 teamnote
+// https://github.com/green5555/Teamnote/blob/master/TeamNote/BiMatch.cpp
+
 #include <iostream>
 #include <vector>
 #include <cmath>
