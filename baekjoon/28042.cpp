@@ -9,9 +9,9 @@ void solve() {
     vector<bool> isup;
     long long tmp = h;
     for (int i = n; i > 0; i--) {
-        if (tmp > (1L << (i - 1))) {
+        if (tmp > (1LL << (i - 1))) {
             isup.push_back(true);
-            tmp = (1L << i) - tmp + 1;
+            tmp = (1LL << i) - tmp + 1;
         } else {
             isup.push_back(false);
         }
@@ -19,19 +19,19 @@ void solve() {
 
     tmp = p;
     for (int i = isup.size() - 1; i >= 0; i--) {
-        if (tmp <= (1L << i)) { // left
+        if (tmp <= (1LL << i)) { // left
             if (isup[i]) {
-                tmp = (1L << i) - tmp + 1;
+                tmp = (1LL << i) - tmp + 1;
                 cout << 'L';
             } else {
                 cout << 'R';
             }
         } else { // right
             if (isup[i]) {
-                tmp = (1L << i) - (tmp - (1L << i)) + 1;
+                tmp = (1LL << i) - (tmp - (1LL << i)) + 1;
                 cout << 'R';
             } else {
-                tmp = tmp - (1L << i);
+                tmp = tmp - (1LL << i);
                 cout << 'L';
             }
         }
