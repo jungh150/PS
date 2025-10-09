@@ -31,9 +31,9 @@ struct BiMatching {
     }
 
     int biMatch(int n=MAX) {
-		fill(A, A+n, -1);
-		fill(B, B+n, -1);
-		fill(was, was+n, 0);
+        fill(A, A+n, -1);
+        fill(B, B+n, -1);
+        fill(was, was+n, 0);
         iter = 0;
         int res = 0;
         while (true) {
