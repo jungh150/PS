@@ -1,12 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <stack>
+#include <algorithm>
 using namespace std;
 
 int n, m, idx;
 vector<vector<int>> adj1;
 vector<vector<int>> adj2;
-vector<bool> vst;
+vector<int> vst;
 stack<int> stk;
 vector<int> scc;
 
@@ -50,14 +51,14 @@ void solve() {
         adj2[a].push_back(neg(b));
     }
 
-    vst = vector<bool>(2 * n + 1, false);
+    vst = vector<int>(2 * n + 1, false);
     for (int i = 1; i < 2 * n + 1; i++) {
         if (!vst[i]) dfs1(i);
     }
 
     idx = 0;
     scc = vector<int>(2 * n + 1, -1);
-    vst = vector<bool>(2 * n + 1, false);
+    vst = vector<int>(2 * n + 1, false);
     while (!stk.empty()) {
         int x = stk.top();
         stk.pop();
@@ -75,6 +76,18 @@ void solve() {
     }
 
     cout << 1 << '\n';
+
+    vector<pair<int, int>> sccg;
+    for (int i = 1; i < 2 * n + 1; i++) sccg.emplace_back(scc[i], i);
+    sort(sccg.begin(), sccg.end());
+
+    vector<int> ans(n + 1, -1);
+    
+    for (int i = 1; i < n + 1; i++) {
+        if (scc[i] > scc[i + n]) cout << 1 << ' ';
+        else cout << 0 << ' ';
+    }
+    cout << '\n';
 }
 
 int main() {
