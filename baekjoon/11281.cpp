@@ -76,15 +76,9 @@ void solve() {
     }
 
     cout << 1 << '\n';
-
-    vector<pair<int, int>> sccg;
-    for (int i = 1; i < 2 * n + 1; i++) sccg.emplace_back(scc[i], i);
-    sort(sccg.begin(), sccg.end());
-
-    vector<int> ans(n + 1, -1);
     
     for (int i = 1; i < n + 1; i++) {
-        if (scc[i] > scc[i + n]) cout << 1 << ' ';
+        if (scc[i] > scc[neg(i)]) cout << 1 << ' ';
         else cout << 0 << ' ';
     }
     cout << '\n';
