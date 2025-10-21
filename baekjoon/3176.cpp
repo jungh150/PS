@@ -77,9 +77,9 @@ void solve() {
 
     // parent[i][j] = i번 정점의 2^j번째 부모 노드
     parent = vector<vector<int>>(n + 1, vector<int>(20, 0));
-    // parent[i][j] = i번 정점부터 2^j번째 부모 노드까지의 가장 짧은 도로의 길이
+    // minc[i][j] = i번 정점부터 2^j번째 부모 노드까지의 가장 짧은 도로의 길이
     minc = vector<vector<int>>(n + 1, vector<int>(20, 1e7));
-    // parent[i][j] = i번 정점부터 2^j번째 부모 노드까지의  가장 긴 도로의 길이
+    // maxc[i][j] = i번 정점부터 2^j번째 부모 노드까지의  가장 긴 도로의 길이
     maxc = vector<vector<int>>(n + 1, vector<int>(20, 0));
     // depth[i] = i번 정점의 깊이
     depth = vector<int>(n + 1);
