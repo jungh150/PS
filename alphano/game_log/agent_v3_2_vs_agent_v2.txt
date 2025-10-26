@@ -1,0 +1,1212 @@
+=== Game 1: agent1=O, agent2=X ===
+[TURN 1] Player O line='MOVE 1 1 2 2' time=1ms rem=9999ms
+O.....X
+.O.....
+.......
+.......
+.......
+.......
+X.....O
+
+[TURN 2] Player X line='MOVE 1 7 2 7' time=922ms rem=9078ms
+O.....X
+.O....X
+.......
+.......
+.......
+.......
+X.....O
+
+[TURN 3] Player O line='MOVE 2 2 3 3' time=384ms rem=9615ms
+O.....X
+.O....X
+..O....
+.......
+.......
+.......
+X.....O
+
+[TURN 4] Player X line='MOVE 1 7 3 5' time=1ms rem=9077ms
+O......
+.O....X
+..O.X..
+.......
+.......
+.......
+X.....O
+
+[TURN 5] Player O line='MOVE 3 3 4 4' time=385ms rem=9230ms
+O......
+.O....X
+..O.O..
+...O...
+.......
+.......
+X.....O
+
+[TURN 6] Player X line='MOVE 2 7 3 6' time=846ms rem=8231ms
+O......
+.O....X
+..O.XX.
+...O...
+.......
+.......
+X.....O
+
+[TURN 7] Player O line='MOVE 4 4 4 5' time=386ms rem=8844ms
+O......
+.O....X
+..O.OO.
+...OO..
+.......
+.......
+X.....O
+
+[TURN 8] Player X line='MOVE 2 7 4 6' time=1ms rem=8230ms
+O......
+.O.....
+..O.XX.
+...OXX.
+.......
+.......
+X.....O
+
+[TURN 9] Player O line='MOVE 3 3 3 4' time=372ms rem=8472ms
+O......
+.O.....
+..OOOX.
+...OOX.
+.......
+.......
+X.....O
+
+[TURN 10] Player X line='MOVE 3 6 2 4' time=780ms rem=7450ms
+O......
+.O.X...
+..XXX..
+...OOX.
+.......
+.......
+X.....O
+
+[TURN 11] Player O line='MOVE 2 2 2 3' time=371ms rem=8101ms
+O......
+.OOO...
+..OOX..
+...OOX.
+.......
+.......
+X.....O
+
+[TURN 12] Player X line='MOVE 3 5 4 3' time=1ms rem=7449ms
+O......
+.OOO...
+..XX...
+..XXOX.
+.......
+.......
+X.....O
+
+[TURN 13] Player O line='MOVE 4 5 3 5' time=356ms rem=7745ms
+O......
+.OOO...
+..XOO..
+..XOOO.
+.......
+.......
+X.....O
+
+[TURN 14] Player X line='MOVE 4 3 2 5' time=717ms rem=6732ms
+O......
+.OOXX..
+..XXX..
+...OOO.
+.......
+.......
+X.....O
+
+[TURN 15] Player O line='MOVE 4 4 4 3' time=358ms rem=7387ms
+O......
+.OOXX..
+..OOX..
+..OOOO.
+.......
+.......
+X.....O
+
+[TURN 16] Player X line='MOVE 2 4 3 2' time=1ms rem=6731ms
+O......
+.XX.X..
+.XXOX..
+..XOOO.
+.......
+.......
+X.....O
+
+[TURN 17] Player O line='MOVE 4 4 2 4' time=340ms rem=7047ms
+O......
+.XOOO..
+.XOOO..
+..X.OO.
+.......
+.......
+X.....O
+
+[TURN 18] Player X line='MOVE 4 3 4 4' time=658ms rem=6073ms
+O......
+.XOOO..
+.XXXX..
+..XXXO.
+.......
+.......
+X.....O
+
+[TURN 19] Player O line='MOVE 4 6 5 5' time=343ms rem=6704ms
+O......
+.XOOO..
+.XXXX..
+..XOOO.
+....O..
+.......
+X.....O
+
+[TURN 20] Player X line='MOVE 4 3 5 4' time=607ms rem=5466ms
+O......
+.XOOO..
+.XXXX..
+..XXXO.
+...XX..
+.......
+X.....O
+
+[TURN 21] Player O line='MOVE 4 6 5 6' time=344ms rem=6360ms
+O......
+.XOOO..
+.XXXX..
+..XXOO.
+...XOO.
+.......
+X.....O
+
+[TURN 22] Player X line='MOVE 3 5 3 6' time=559ms rem=4907ms
+O......
+.XOOX..
+.XXXXX.
+..XXXX.
+...XOO.
+.......
+X.....O
+
+[TURN 23] Player O line='MOVE 5 5 6 4' time=347ms rem=6013ms
+O......
+.XOOX..
+.XXXXX.
+..XXXX.
+...OOO.
+...O...
+X.....O
+
+[TURN 24] Player X line='MOVE 4 6 6 5' time=514ms rem=4393ms
+O......
+.XOOX..
+.XXXXX.
+..XXX..
+...XXX.
+...XX..
+X.....O
+
+[TURN 25] Player O line='MOVE 1 1 2 1' time=327ms rem=5686ms
+O......
+OOOOX..
+.OXXXX.
+..XXX..
+...XXX.
+...XX..
+X.....O
+
+[TURN 26] Player X line='MOVE 2 5 1 3' time=472ms rem=3921ms
+O.X....
+OXXX...
+.OXXXX.
+..XXX..
+...XXX.
+...XX..
+X.....O
+
+[TURN 27] Player O line='MOVE 3 2 4 1' time=327ms rem=5359ms
+O.X....
+OXXX...
+.OXXXX.
+O.XXX..
+...XXX.
+...XX..
+X.....O
+
+[TURN 28] Player X line='MOVE 4 3 3 1' time=434ms rem=3487ms
+O.X....
+XXXX...
+XXXXXX.
+X..XX..
+...XXX.
+...XX..
+X.....O
+
+[TURN 29] Player O line='MOVE 7 7 6 6' time=310ms rem=5049ms
+O.X....
+XXXX...
+XXXXXX.
+X..XX..
+...XOO.
+...XOO.
+X.....O
+
+[TURN 30] Player X line='MOVE 5 4 7 6' time=5ms rem=3482ms
+O.X....
+XXXX...
+XXXXXX.
+X..XX..
+....OO.
+...XXX.
+X....XX
+
+[TURN 31] Player O line='MOVE 5 6 5 4' time=310ms rem=4739ms
+O.X....
+XXXX...
+XXXXXX.
+X..OO..
+...OO..
+...OOX.
+X....XX
+
+[TURN 32] Player X line='MOVE 3 6 5 6' time=400ms rem=3082ms
+O.X....
+XXXX...
+XXXXX..
+X..OX..
+...OXX.
+...OXX.
+X....XX
+
+[TURN 33] Player O line='MOVE 6 4 4 6' time=292ms rem=4447ms
+O.X....
+XXXX...
+XXXXO..
+X..OOO.
+...OOO.
+....XX.
+X....XX
+
+[TURN 34] Player X line='MOVE 2 4 3 6' time=368ms rem=2714ms
+O.X....
+XXX....
+XXXXXX.
+X..OXX.
+...OOO.
+....XX.
+X....XX
+
+[TURN 35] Player O line='MOVE 4 4 4 2' time=272ms rem=4175ms
+O.X....
+XXX....
+OOOXXX.
+OO..XX.
+...OOO.
+....XX.
+X....XX
+
+[TURN 36] Player X line='MOVE 6 6 4 4' time=339ms rem=2375ms
+O.X....
+XXX....
+OOXXXX.
+OO.XXX.
+...XXO.
+....X..
+X....XX
+
+[TURN 37] Player O line='MOVE 4 2 4 3' time=259ms rem=3916ms
+O.X....
+XXX....
+OOOOXX.
+OOOOXX.
+...OXO.
+....X..
+X....XX
+
+[TURN 38] Player X line='MOVE 6 5 5 3' time=312ms rem=2063ms
+O.X....
+XXX....
+OOOOXX.
+OXXXXX.
+..XXXO.
+.......
+X....XX
+
+[TURN 39] Player O line='MOVE 3 4 2 5' time=241ms rem=3675ms
+O.X....
+XXX.O..
+OOOOOO.
+OXXXXX.
+..XXXO.
+.......
+X....XX
+
+[TURN 40] Player X line='MOVE 2 2 2 4' time=289ms rem=1774ms
+O.X....
+X.XXX..
+OOXXXO.
+OXXXXX.
+..XXXO.
+.......
+X....XX
+
+[TURN 41] Player O line='MOVE 5 6 6 5' time=244ms rem=3431ms
+O.X....
+X.XXX..
+OOXXXO.
+OXXXXX.
+..XOOO.
+....O..
+X....OX
+
+[TURN 42] Player X line='MOVE 4 4 6 6' time=3ms rem=1771ms
+O.X....
+X.XXX..
+OOXXXO.
+OXX.XX.
+..XOXX.
+....XX.
+X....XX
+
+[TURN 43] Player O line='MOVE 3 1 5 2' time=226ms rem=3205ms
+O.X....
+X.XXX..
+.OXXXO.
+OOO.XX.
+.OOOXX.
+....XX.
+X....XX
+
+[TURN 44] Player X line='MOVE 6 5 4 4' time=261ms rem=1510ms
+O.X....
+X.XXX..
+.OXXXO.
+OOXXXX.
+.OXXXX.
+.....X.
+X....XX
+
+[TURN 45] Player O line='MOVE 5 2 6 4' time=211ms rem=2994ms
+O.X....
+X.XXX..
+.OXXXO.
+OOXXXX.
+..OOOX.
+...O.X.
+X....XX
+
+[TURN 46] Player X line='MOVE 4 3 5 2' time=240ms rem=1270ms
+O.X....
+X.XXX..
+.OXXXO.
+XXXXXX.
+.XXOOX.
+...O.X.
+X....XX
+
+[TURN 47] Player O line='MOVE 5 4 6 3' time=212ms rem=2782ms
+O.X....
+X.XXX..
+.OXXXO.
+XXXXXX.
+.OOOOX.
+..OO.X.
+X....XX
+
+[TURN 48] Player X line='MOVE 7 1 6 2' time=224ms rem=1046ms
+O.X....
+X.XXX..
+.OXXXO.
+XXXXXX.
+.XXOOX.
+.XXO.X.
+X....XX
+
+[TURN 49] Player O line='MOVE 3 2 1 4' time=214ms rem=2568ms
+O.OO...
+X.OOO..
+..XXXO.
+XXXXXX.
+.XXOOX.
+.XXO.X.
+X....XX
+
+[TURN 50] Player X line='MOVE 7 7 6 5' time=204ms rem=842ms
+O.OO...
+X.OOO..
+..XXXO.
+XXXXXX.
+.XXXXX.
+.XXXXX.
+X....X.
+
+[TURN 51] Player O line='MOVE 1 4 3 2' time=202ms rem=2366ms
+O.O....
+O.OOO..
+.OOXXO.
+OOOXXX.
+.XXXXX.
+.XXXXX.
+X....X.
+
+[TURN 52] Player X line='MOVE 3 5 2 6' time=189ms rem=653ms
+O.O....
+O.OOXX.
+.OOXXX.
+OOOXXX.
+.XXXXX.
+.XXXXX.
+X....X.
+
+[TURN 53] Player O line='MOVE 2 3 1 5' time=200ms rem=2166ms
+O.O.O..
+O..OOO.
+.OOXXX.
+OOOXXX.
+.XXXXX.
+.XXXXX.
+X....X.
+
+[TURN 54] Player X line='MOVE 3 4 2 3' time=174ms rem=479ms
+O.X.O..
+O.XXOO.
+.XXXXX.
+OOOXXX.
+.XXXXX.
+.XXXXX.
+X....X.
+
+[TURN 55] Player O line='MOVE 4 1 2 2' time=202ms rem=1964ms
+O.O.O..
+OOOXOO.
+.OOXXX.
+.OOXXX.
+.XXXXX.
+.XXXXX.
+X....X.
+
+[TURN 56] Player X line='MOVE 3 6 1 6' time=160ms rem=319ms
+O.O.XX.
+OOOXXX.
+.OOXX..
+.OOXXX.
+.XXXXX.
+.XXXXX.
+X....X.
+
+[TURN 57] Player O line='MOVE 2 2 1 4' time=204ms rem=1760ms
+O.OOOX.
+O.OOOX.
+.OOXX..
+.OOXXX.
+.XXXXX.
+.XXXXX.
+X....X.
+
+[TURN 58] Player X line='MOVE 3 4 2 2' time=153ms rem=166ms
+X.XOOX.
+XXXOOX.
+.XX.X..
+.OOXXX.
+.XXXXX.
+.XXXXX.
+X....X.
+
+[TURN 59] Player O line='MOVE 2 5 3 6' time=201ms rem=1559ms
+X.XOOX.
+XXXOOO.
+.XX.OO.
+.OOXOO.
+.XXXXX.
+.XXXXX.
+X....X.
+
+[TURN 60] Player X line='MOVE 1 3 3 4' time=156ms rem=10ms
+X..OOX.
+XXXXXO.
+.XXXXO.
+.OXXXO.
+.XXXXX.
+.XXXXX.
+X....X.
+
+[TURN 61] Player O line='MOVE 2 6 4 7' time=201ms rem=1358ms
+X..OOX.
+XXXXX..
+.XXXXO.
+.OXXXOO
+.XXXXO.
+.XXXXX.
+X....X.
+
+[TURN 62] Player X line='MOVE 4 5 5 7' time=4ms rem=6ms
+X..OOX.
+XXXXX..
+.XXXXO.
+.OXX.XX
+.XXXXXX
+.XXXXX.
+X....X.
+
+[TURN 63] Player O line='MOVE 4 2 3 1' time=202ms rem=1156ms
+X..OOX.
+OOXXX..
+OOXXXO.
+.OXX.XX
+.XXXXXX
+.XXXXX.
+X....X.
+
+[TURN 64] Player X line='MOVE 4 4 2 6' time=5ms rem=1ms
+X..OXX.
+OOXXXX.
+OOXXXX.
+.OX..XX
+.XXXXXX
+.XXXXX.
+X....X.
+
+[TURN 65] Player O line='MOVE 2 2 4 4' time=211ms rem=945ms
+X..OXX.
+O.XXXX.
+OOOOOX.
+.OOO.XX
+.XOOOXX
+.XXXXX.
+X....X.
+
+[TLE] Player X exceeded time. Elapsed=1ms Rem=1ms
+[END] O=13 X=20 empty=16 diff(O-X)=-7 turns=65
+Result Game1: O=13 X=20 diff(O-X)=-7
+Verdict Game1: agent2 (X) wins by 7
+
+=== Game 2: agent1=X, agent2=O ===
+[TURN 1] Player O line='MOVE 1 1 2 2' time=921ms rem=9079ms
+O.....X
+.O.....
+.......
+.......
+.......
+.......
+X.....O
+
+[TURN 2] Player X line='MOVE 1 7 2 6' time=384ms rem=9616ms
+O.....X
+.O...X.
+.......
+.......
+.......
+.......
+X.....O
+
+[TURN 3] Player O line='MOVE 2 2 3 3' time=1ms rem=9078ms
+O.....X
+.O...X.
+..O....
+.......
+.......
+.......
+X.....O
+
+[TURN 4] Player X line='MOVE 7 1 5 3' time=387ms rem=9229ms
+O.....X
+.O...X.
+..O....
+.......
+..X....
+.......
+......O
+
+[TURN 5] Player O line='MOVE 3 3 4 4' time=848ms rem=8230ms
+O.....X
+.O...X.
+..O....
+...O...
+..O....
+.......
+......O
+
+[TURN 6] Player X line='MOVE 2 6 3 5' time=371ms rem=8858ms
+O.....X
+.O...X.
+..O.X..
+...X...
+..O....
+.......
+......O
+
+[TURN 7] Player O line='MOVE 3 3 3 4' time=3ms rem=8227ms
+O.....X
+.O...X.
+..OOO..
+...O...
+..O....
+.......
+......O
+
+[TURN 8] Player X line='MOVE 2 6 2 5' time=372ms rem=8486ms
+O.....X
+.O..XX.
+..OXX..
+...O...
+..O....
+.......
+......O
+
+[TURN 9] Player O line='MOVE 4 4 2 4' time=780ms rem=7447ms
+O.....X
+.O.OOX.
+..OOO..
+.......
+..O....
+.......
+......O
+
+[TURN 10] Player X line='MOVE 2 6 4 4' time=373ms rem=8113ms
+O.....X
+.O.OO..
+..XXX..
+...X...
+..X....
+.......
+......O
+
+[TURN 11] Player O line='MOVE 2 2 4 3' time=717ms rem=6730ms
+O.....X
+...OO..
+..OOX..
+..OO...
+..O....
+.......
+......O
+
+[TURN 12] Player X line='MOVE 3 5 4 5' time=358ms rem=7755ms
+O.....X
+...OO..
+..OXX..
+..OXX..
+..O....
+.......
+......O
+
+[TURN 13] Player O line='MOVE 4 3 5 4' time=659ms rem=6071ms
+O.....X
+...OO..
+..OXX..
+..OOO..
+..OO...
+.......
+......O
+
+[TURN 14] Player X line='MOVE 3 4 5 5' time=358ms rem=7397ms
+O.....X
+...OO..
+..O.X..
+..OXX..
+..OXX..
+.......
+......O
+
+[TURN 15] Player O line='MOVE 2 4 3 4' time=606ms rem=5465ms
+O.....X
+...OO..
+..OOO..
+..OOO..
+..OXX..
+.......
+......O
+
+[TURN 16] Player X line='MOVE 5 4 4 2' time=342ms rem=7055ms
+O.....X
+...OO..
+..XOO..
+.XXOO..
+..X.X..
+.......
+......O
+
+[TURN 17] Player O line='MOVE 4 4 5 4' time=3ms rem=5462ms
+O.....X
+...OO..
+..XOO..
+.XOOO..
+..OOO..
+.......
+......O
+
+[TURN 18] Player X line='MOVE 1 7 3 6' time=345ms rem=6710ms
+O......
+...OX..
+..XOXX.
+.XOOX..
+..OOO..
+.......
+......O
+
+[TURN 19] Player O line='MOVE 5 5 4 6' time=558ms rem=4904ms
+O......
+...OX..
+..XOOO.
+.XOOOO.
+..OOO..
+.......
+......O
+
+[TURN 20] Player X line='MOVE 2 5 2 6' time=326ms rem=6384ms
+O......
+...OXX.
+..XOXX.
+.XOOOO.
+..OOO..
+.......
+......O
+
+[TURN 21] Player O line='MOVE 4 3 3 2' time=4ms rem=4900ms
+O......
+...OXX.
+.OOOXX.
+.OOOOO.
+..OOO..
+.......
+......O
+
+[TURN 22] Player X line='MOVE 2 5 2 3' time=328ms rem=6056ms
+O......
+..XX.X.
+.XXXXX.
+.OOOOO.
+..OOO..
+.......
+......O
+
+[TURN 23] Player O line='MOVE 4 6 2 5' time=513ms rem=4387ms
+O......
+..XOOO.
+.XXOOO.
+.OOOO..
+..OOO..
+.......
+......O
+
+[TURN 24] Player X line='MOVE 3 3 5 2' time=311ms rem=5745ms
+O......
+..XOOO.
+.X.OOO.
+.XXOO..
+.XXOO..
+.......
+......O
+
+[TURN 25] Player O line='MOVE 2 5 3 3' time=5ms rem=4382ms
+O......
+..OO.O.
+.OOOOO.
+.OOOO..
+.XXOO..
+.......
+......O
+
+[TURN 26] Player X line='MOVE 5 3 6 4' time=295ms rem=5450ms
+O......
+..OO.O.
+.OOOOO.
+.OOOO..
+.XXXX..
+...X...
+......O
+
+[TURN 27] Player O line='MOVE 7 7 6 5' time=471ms rem=3911ms
+O......
+..OO.O.
+.OOOOO.
+.OOOO..
+.XXOO..
+...OO..
+.......
+
+[TURN 28] Player X line='MOVE 5 2 4 1' time=295ms rem=5155ms
+O......
+..OO.O.
+.XOOOO.
+XXOOO..
+.XXOO..
+...OO..
+.......
+
+[TURN 29] Player O line='MOVE 2 3 3 1' time=435ms rem=3476ms
+O......
+...O.O.
+OOOOOO.
+OOOOO..
+.XXOO..
+...OO..
+.......
+
+[TURN 30] Player X line='MOVE 5 3 7 5' time=279ms rem=4876ms
+O......
+...O.O.
+OOOOOO.
+OOOOO..
+.X.OO..
+...XX..
+....X..
+
+[TURN 31] Player O line='MOVE 3 5 5 3' time=401ms rem=3075ms
+O......
+...O.O.
+OOOO.O.
+OOOOO..
+.OOOO..
+...OX..
+....X..
+
+[TURN 32] Player X line='MOVE 7 5 6 3' time=264ms rem=4612ms
+O......
+...O.O.
+OOOO.O.
+OOOOO..
+.XXXO..
+..XXX..
+.......
+
+[TURN 33] Player O line='MOVE 4 1 6 2' time=368ms rem=2707ms
+O......
+...O.O.
+OOOO.O.
+.OOOO..
+.OOXO..
+.OOXX..
+.......
+
+[TURN 34] Player X line='MOVE 5 4 3 5' time=252ms rem=4360ms
+O......
+...X.X.
+OOOXXX.
+.OOXX..
+.OO.O..
+.OOXX..
+.......
+
+[TURN 35] Player O line='MOVE 4 3 2 5' time=3ms rem=2704ms
+O......
+...OOO.
+OOOOOO.
+.O.XX..
+.OO.O..
+.OOXX..
+.......
+
+[TURN 36] Player X line='MOVE 4 4 4 3' time=240ms rem=4120ms
+O......
+...OOO.
+OXXXOO.
+.XXXX..
+.XX.O..
+.OOXX..
+.......
+
+[TURN 37] Player O line='MOVE 5 5 5 4' time=338ms rem=2366ms
+O......
+...OOO.
+OXXXOO.
+.XOOO..
+.XOOO..
+.OOOO..
+.......
+
+[TURN 38] Player X line='MOVE 3 4 4 6' time=240ms rem=3880ms
+O......
+...OOO.
+OXX.XX.
+.XOOXX.
+.XOOX..
+.OOOO..
+.......
+
+[TURN 39] Player O line='MOVE 4 4 5 6' time=3ms rem=2363ms
+O......
+...OOO.
+OXX.XX.
+.XO.OO.
+.XOOOO.
+.OOOO..
+.......
+
+[TURN 40] Player X line='MOVE 3 5 4 4' time=223ms rem=3657ms
+O......
+...OOO.
+OXX.XX.
+.XXXXO.
+.XXXXO.
+.OOOO..
+.......
+
+[TURN 41] Player O line='MOVE 2 4 3 4' time=312ms rem=2051ms
+O......
+...OOO.
+OXOOOX.
+.XOOOO.
+.XXXXO.
+.OOOO..
+.......
+
+[TURN 42] Player X line='MOVE 4 2 2 3' time=225ms rem=3432ms
+O......
+..XXOO.
+OXXXOX.
+..OOOO.
+.XXXXO.
+.OOOO..
+.......
+
+[TURN 43] Player O line='MOVE 3 1 4 2' time=286ms rem=1765ms
+O......
+..XXOO.
+OOOXOX.
+.OOOOO.
+.OOXXO.
+.OOOO..
+.......
+
+[TURN 44] Player X line='MOVE 2 3 2 2' time=228ms rem=3204ms
+X......
+.XXXOO.
+XXXXOX.
+.OOOOO.
+.OOXXO.
+.OOOO..
+.......
+
+[TURN 45] Player O line='MOVE 2 5 1 3' time=263ms rem=1502ms
+X.O....
+.OOO.O.
+XXXXOX.
+.OOOOO.
+.OOXXO.
+.OOOO..
+.......
+
+[TURN 46] Player X line='MOVE 5 4 7 4' time=213ms rem=2991ms
+X.O....
+.OOO.O.
+XXXXOX.
+.OOOOO.
+.OO.XO.
+.OXXX..
+...X...
+
+[TURN 47] Player O line='MOVE 4 2 5 4' time=242ms rem=1260ms
+X.O....
+.OOO.O.
+XXXXOX.
+..OOOO.
+.OOOOO.
+.OOOO..
+...X...
+
+[TURN 48] Player X line='MOVE 3 6 2 5' time=202ms rem=2789ms
+X.O....
+.OOXXX.
+XXXXXX.
+..OOOO.
+.OOOOO.
+.OOOO..
+...X...
+
+[TURN 49] Player O line='MOVE 4 4 4 2' time=3ms rem=1257ms
+X.O....
+.OOXXX.
+OOOXXX.
+.OO.OO.
+.OOOOO.
+.OOOO..
+...X...
+
+[TURN 50] Player X line='MOVE 3 4 4 4' time=204ms rem=2585ms
+X.O....
+.OOXXX.
+OOXXXX.
+.OXXXO.
+.OXXXO.
+.OOOO..
+...X...
+
+[TURN 51] Player O line='MOVE 1 3 1 5' time=221ms rem=1036ms
+X...O..
+.OOOOO.
+OOXXXX.
+.OXXXO.
+.OXXXO.
+.OOOO..
+...X...
+
+[TURN 52] Player X line='MOVE 5 3 4 1' time=201ms rem=2384ms
+X...O..
+.OOOOO.
+XXXXXX.
+XXXXXO.
+.X.XXO.
+.OOOO..
+...X...
+
+[TURN 53] Player O line='MOVE 6 2 5 3' time=204ms rem=832ms
+X...O..
+.OOOOO.
+XXXXXX.
+XOOOXO.
+.OOOXO.
+.OOOO..
+...X...
+
+[TURN 54] Player X line='MOVE 3 3 1 4' time=201ms rem=2183ms
+X..XX..
+.OXXXO.
+XX.XXX.
+XOOOXO.
+.OOOXO.
+.OOOO..
+...X...
+
+[TURN 55] Player O line='MOVE 5 4 3 3' time=3ms rem=829ms
+X..XX..
+.OOOXO.
+XOOOXX.
+XOOOXO.
+.OO.XO.
+.OOOO..
+...X...
+
+[TURN 56] Player X line='MOVE 4 5 5 4' time=201ms rem=1982ms
+X..XX..
+.OOOXO.
+XOOOXX.
+XOXXXO.
+.OXXXO.
+.OXXX..
+...X...
+
+[TURN 57] Player O line='MOVE 6 2 7 3' time=187ms rem=642ms
+X..XX..
+.OOOXO.
+XOOOXX.
+XOXXXO.
+.OXXXO.
+.OOOX..
+..OO...
+
+[TURN 58] Player X line='MOVE 3 6 5 7' time=203ms rem=1779ms
+X..XX..
+.OOOXO.
+XOOOX..
+XOXXXX.
+.OXXXXX
+.OOOX..
+..OO...
+
+[TURN 59] Player O line='MOVE 2 6 3 6' time=174ms rem=468ms
+X..XX..
+.OOOOO.
+XOOOOO.
+XOXXOO.
+.OXXXXX
+.OOOX..
+..OO...
+
+[TURN 60] Player X line='MOVE 5 3 7 2' time=202ms rem=1577ms
+X..XX..
+.OOOOO.
+XOOOOO.
+XOXXOO.
+.O.XXXX
+.XXOX..
+.XXO...
+
+[TURN 61] Player O line='MOVE 7 4 6 6' time=158ms rem=310ms
+X..XX..
+.OOOOO.
+XOOOOO.
+XOXXOO.
+.O.XOOO
+.XXOOO.
+.XX....
+
+[TURN 62] Player X line='MOVE 5 4 5 3' time=202ms rem=1375ms
+X..XX..
+.OOOOO.
+XOOOOO.
+XXXXOO.
+.XXXOOO
+.XXXOO.
+.XX....
+
+[TURN 63] Player O line='MOVE 3 2 5 1' time=152ms rem=158ms
+X..XX..
+.OOOOO.
+X.OOOO.
+OOXXOO.
+OOXXOOO
+.OXXOO.
+.XX....
+
+[TURN 64] Player X line='MOVE 1 1 3 2' time=221ms rem=1154ms
+...XX..
+.XXOOO.
+XXXOOO.
+XXXXOO.
+OOXXOOO
+.OXXOO.
+.XX....
+
+[TURN 65] Player O line='MOVE 2 4 1 3' time=152ms rem=6ms
+..OOX..
+.OOOOO.
+XXXOOO.
+XXXXOO.
+OOXXOOO
+.OXXOO.
+.XX....
+
+[TURN 66] Player X line='MOVE 6 4 7 6' time=214ms rem=940ms
+..OOX..
+.OOOOO.
+XXXOOO.
+XXXXOO.
+OOXXOOO
+.OX.XX.
+.XX..X.
+
+[TURN 67] Player O line='MOVE 4 5 6 4' time=3ms rem=3ms
+..OOX..
+.OOOOO.
+XXXOOO.
+XXXX.O.
+OOOOOOO
+.OOOOX.
+.XO..X.
+
+[TURN 68] Player X line='MOVE 3 3 4 5' time=222ms rem=718ms
+..OOX..
+.OOOOO.
+XX.XXX.
+XXXXXX.
+OOOXXXO
+.OOOOX.
+.XO..X.
+
+[TLE] Player O exceeded time. Elapsed=3ms Rem=3ms
+[END] O=16 X=18 empty=15 diff(O-X)=-2 turns=68
+Result Game2: O=16 X=18 diff(O-X)=-2
+Verdict Game2: agent1 (X) wins by 2
+
+=== Summary (agent1 perspective) ===
+Total diff = (G1 O-X) - (G2 O-X) = -7 - -2 = -5
+Overall: agent2 beats agent1 by 5
