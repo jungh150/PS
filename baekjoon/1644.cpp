@@ -15,7 +15,7 @@ int main() {
     int sqnum = sqrt(num);
     for (int i = 2; i <= sqnum; i++) {
         if (p[i]) {
-            for (int j = i * i; j <= num; j += i) {
+            for (int j = i * i; j < num; j += i) {
                 p[j] = 0;
             }
         }
