@@ -3,10 +3,9 @@
 #include <algorithm>
 using namespace std;
 
-int ysz;
-
 struct SegTree {
     vector<long long> tree;
+    int n;
 
     long long update(int idx, int l, int r, int target, long long val) {
         if (target < l || target > r) return tree[idx];
@@ -23,11 +22,11 @@ struct SegTree {
     }
     
     long long update(int target, long long val) {
-        return update(1, 0, ysz, target, val);
+        return update(1, 0, n, target, val);
     }
     
     long long query(int wl, int wr) {
-        return query(1, 0, ysz, wl, wr);
+        return query(1, 0, n, wl, wr);
     }
 };
 
@@ -53,16 +52,15 @@ void solve() {
     sort(p.begin(), p.end(), compare);
     sort(ycom.begin(), ycom.end());
     ycom.erase(unique(ycom.begin(), ycom.end()), ycom.end());
-    
-    ysz = ycom.size() + 1;
 
     SegTree seg; // 지금까지 본 섬들의 y값 별 개수를 저장하는 세그먼트 트리
-    seg.tree.assign(4 * ysz + 1, 0);
+    seg.n = ycom.size() + 1;
+    seg.tree.assign(4 * seg.n + 1, 0);
 
     long long ans = 0;
     for (auto [x, y]: p) {
         int yidx = lower_bound(ycom.begin(), ycom.end(), y) - ycom.begin();
-        ans += seg.query(yidx, ysz);
+        ans += seg.query(yidx, seg.n);
         seg.update(yidx, 1);
     }
 
