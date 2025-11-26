@@ -9,20 +9,12 @@ void solve() {
     vector<long long> a;
     for (long long x = 1; x < sqrt(n) + 1; x++) {
         if (n % x == 0) {
-            if (x == n / x) {
-                a.push_back(x);
-                a.push_back(x);
-            } else {
-                if ((x + n/x) % 2 == 0) {
+            if ((x + n/x) % 2 == 0) {
                 a.push_back(x);
                 a.push_back(n / x);
-                }
             }
         }
     }
-
-    // for (long long x: a) cout << x << ' ';
-    // cout << '\n';
 
     long long sz = a.size();
     cout << sz << ' ' << 2 * k * sz << '\n';

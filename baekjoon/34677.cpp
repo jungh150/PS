@@ -35,22 +35,6 @@ void solve() {
         }
     }
 
-    // for (int i = 0; i < n; i++) {
-    //     for (int j = 0; j < n; j++) {
-    //         cout << adp[i][j] << ' ';
-    //     }
-    //     cout << "\n";
-    // }
-    // cout << "\n";
-
-    // for (int i = 0; i < n; i++) {
-    //     for (int j = 0; j < n; j++) {
-    //         cout << bdp[i][j] << ' ';
-    //     }
-    //     cout << "\n";
-    // }
-    // cout << "\n";
-
     int ans = 0;
     int s = 0;
     while (s < n) {
