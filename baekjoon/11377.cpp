@@ -6,8 +6,6 @@ using namespace std;
 
 typedef pair<int, int> pii;
 
-int n, m, k;
-
 const int MAX = 2010, INF = INT_MAX;
 struct maxflow {
     struct edge {
@@ -62,6 +60,7 @@ struct maxflow {
 void solve() {
     maxflow mf;
 
+    int n, m, k;
     cin >> n >> m >> k;
 
     mf.makeEdge(2008, 2007, k); // s -> 중간 노드
@@ -73,7 +72,7 @@ void solve() {
         while (cnt--) {
             int j;
             cin >> j;
-            mf.makeEdge(i, j + 1000, 1);
+            mf.makeEdge(i, j + 1000, 1); // 직원 -> 일
         }
     }
 
