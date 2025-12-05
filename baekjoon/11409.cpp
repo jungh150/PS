@@ -82,7 +82,7 @@ void solve() {
         while (cnt--) {
             int j, x;
             cin >> j >> x;
-            mcmf.add_edge(i, j + 1000, 1, x); // 직원 -> 일
+            mcmf.add_edge(i, j + 1000, 1, -x); // 직원 -> 일
         }
     }
 
@@ -91,7 +91,7 @@ void solve() {
     }
 
     pll ans = mcmf.match(2008, 2009);
-    cout << ans.second << '\n' << ans.first << '\n';
+    cout << ans.second << '\n' << -ans.first << '\n';
 }
 
 int main() {
