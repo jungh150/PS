@@ -6,18 +6,14 @@ void solve() {
     cin >> k;
 
     long long n = 4 * k * k;
-    vector<long long> a;
+    long long cnt = 0;
     for (long long x = 1; x < sqrt(n) + 1; x++) {
         if (n % x == 0) {
-            if ((x + n/x) % 2 == 0) {
-                a.push_back(x);
-                a.push_back(n / x);
-            }
+            if (abs(n/x - x) % 2 == 0) cnt += 2;
         }
     }
 
-    long long sz = a.size();
-    cout << sz << ' ' << 2 * k * sz << '\n';
+    cout << cnt << ' ' << 2 * k * cnt << '\n';
 }
 
 int main() {
