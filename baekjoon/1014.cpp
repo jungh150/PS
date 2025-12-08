@@ -6,8 +6,6 @@ using namespace std;
 
 typedef pair<int, int> pii;
 
-int n, m;
-
 int dx[] = {-1, -1, 0, 0, 1, 1};
 int dy[] = {-1, 1, -1, 1, -1, 1};
 
@@ -67,6 +65,7 @@ int conv(int i, int j) {return (11 * i + j);}
 void solve() {
     maxflow mf;
 
+    int n, m;
     cin >> n >> m;
     vector<vector<bool>> a(n, vector<bool>(m, false));
 

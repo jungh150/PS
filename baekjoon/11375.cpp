@@ -4,8 +4,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, m;
-
 const int MAX = 2001;
 struct BiMatching {
     vector<int> adj[MAX+5];
@@ -56,6 +54,7 @@ struct BiMatching {
 void solve() {
     BiMatching bm;
 
+    int n, m;
     cin >> n >> m;
 
     for (int i = 1; i < n + 1; i++) {
