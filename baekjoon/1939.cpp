@@ -18,6 +18,7 @@ void solve() {
     int s, e;
     cin >> s >> e;
 
+    int ans = 0;
     int l = 0;
     int r = 1e9 + 1;
     while (l < r) {
@@ -32,10 +33,18 @@ void solve() {
             int cur = q.front();
             q.pop();
             for (auto [nxt, c]: adj[cur]) {
-                cout << nxt;
+                if (!vst[nxt] && c >= m) {
+                    vst[nxt] = 1;
+                    q.push(nxt);
+                }
             }
         }
+
+        if (vst[e]) l = m + 1;
+        else r = m;
     }
+
+    cout << l - 1 << '\n';
 }
 
 int main() {
