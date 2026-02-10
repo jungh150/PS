@@ -1,10 +1,13 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
 using namespace std;
 
 void solve() {
-    
+    int n;
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        if (30 % (i + 1) == 0) cout << i << '\n';
+    }
 }
 
 int main() {
