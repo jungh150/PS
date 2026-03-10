@@ -3,11 +3,6 @@
 #include <algorithm>
 using namespace std;
 
-// 첫번째 방법:
-// 품질이 가장 높은 미니어쳐 (여러개라면 가격 가장 낮은거)
-// 두번째 방법:
-// 가격이 가장 낮은 미니어쳐 (여러개라면 품질 가장 높은거)
-
 // 품질 내림차순, 가격 오름차순
 bool compare1(pair<int, int> &a, pair<int, int> &b) {
     if (a.first == b.first) return a.second < b.second;
