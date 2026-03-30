@@ -14,9 +14,14 @@ for _ in range(n - 1):
 
 score.sort(reverse=True)
 
+if m - 1 >= len(score):
+    print("YES")
+    print(0)
+    exit()
+
 tmp = score[m - 1]
 if tmp - h > y:
     print("NO")
 else:
     print("YES")
-    print(tmp - h)
+    print(max(0, tmp - h))
