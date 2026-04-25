@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution {
+class Solution {
     public int[] solution(int []arr) {
         ArrayList<Integer> ans = new ArrayList<>();
         
